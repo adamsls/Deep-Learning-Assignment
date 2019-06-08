@@ -21,9 +21,7 @@ def test(filename):
     baseheight = 32
     
     img = img.resize((basewidth, baseheight), Image.ANTIALIAS)
-    #img.save('resized_image.png')
-    #
-    #new_img = Image.open('resized_image.png')
+
     new_img_array = np.asarray(img)
     scalar = 1 / 255.
     new_img_array_norm = new_img_array * scalar
